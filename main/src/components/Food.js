@@ -54,7 +54,7 @@ const Food = ({Cart,showCart}) => {
         })}
         
 
-        {Cart == true && <div className={Cart ? "fixed top-0 right-0 w-[300px] h-screen bg-orange-300 z-10 duration-300"
+        {Cart === true && <div className={Cart ? "fixed top-0 right-0 w-[300px] h-screen bg-orange-300 z-10 duration-300"
           : "fixed top-0 left-[-100%] w-[300px] h-screen bg-orange-300 z-10 duration-300"}>
 
           <AiOutlineClose onClick={() => showCart(false)} size={25}

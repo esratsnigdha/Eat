@@ -1,18 +1,21 @@
 import React from 'react'
-import { FaBangladeshiTakaSign } from "react-icons/fa6";
+
 
 export default function ItemTile({ item, addToCart, cartItems }) {
 
     return (
-        <div className='border-bg-black'>
-            <img className=' h-[200px] w-[200px] object-cover '
+        <div className='max-w-[1220px] m-auto px-4 py-2 gap-3'>
+            <img className=' w-[200px] h-[150px] object-cover rounded-2xl '
                 src={item.img}
                 alt={item.title} />
-            <p>{item.title}</p>
-            <p>BDT {item.price}</p>
+                <div className='flex justify-between '>
+                <p className='font-bold'>{item.title}</p>
+                <p className='bg-red-600 h-15 w-15 rounded-full -mt-6 text-white py-4 px-2 font-bold'>BDT {item.price}</p>
+                </div>
+           
             <button id={'btn-' + item.id} onClick={(e) => {addToCart(item.id)}}
                 disabled={cartItems[item.id] > 0 ? true : false}
-                className=' bg-red-300 drop-shadow-2xl p-1  
+                className=' rounded-xl bg-red-300 drop-shadow-2xl p-1  
                 hover:bg-red-500 text-center 
                 disabled:bg-gray-300'>Add To Cart</button>
         </div>
