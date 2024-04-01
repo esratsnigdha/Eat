@@ -7,7 +7,7 @@ function App() {
   const [Cart,showCart]= useState(false);
   return (
     <>
-     <div className="bg-pink-200 bg-cover max-w-[1520px] " >
+     <div className="bg-pink-200 bg-cover max-w-[1520px] md:max-w-full sm:max-w-full" >
       <TopNav showCart={showCart} />
       <Food showCart={showCart} Cart={Cart}/>
      
